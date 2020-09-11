@@ -7,6 +7,7 @@ package com.cars24.auction.entity;
  *
  */
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,6 +16,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@EqualsAndHashCode(callSuper = false)
 public class Auction extends BaseEntity {
 
     @Id

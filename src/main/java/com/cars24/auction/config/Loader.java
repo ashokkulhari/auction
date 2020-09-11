@@ -14,7 +14,7 @@ import javax.annotation.PostConstruct;
 import java.util.Optional;
 
 
-@Component
+//@Component
 public class Loader {
 
     @Autowired

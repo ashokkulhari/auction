@@ -29,7 +29,7 @@ public class User implements UserDetails {
     private String userName;
 
     @NotNull(message = "Password cannot be null")
-    @Size(min = 6, message = "Minimum length of Password should be 6")
+    @Size(min = 4, message = "Minimum length of Password should be 4")
     @Column(columnDefinition = "VARCHAR(64)")
     private String password;
 

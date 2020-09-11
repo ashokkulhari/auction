@@ -12,6 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +24,7 @@ import java.util.List;
  *
  */
 @Service
+@Transactional
 public class AuctionService {
 
     @Autowired
@@ -32,6 +34,10 @@ public class AuctionService {
 
     public Page<Auction> getByStatus(String status, Pageable pageable) {
         return auctionRepository.findAllByStatus(status, pageable);
+    }
+
+    public Auction save(Auction auction){
+        return auctionRepository.save(auction);
     }
 
     public void createBid(String itemCode, BidDto bidDto) {

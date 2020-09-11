@@ -1,22 +1,18 @@
-# Getting Started
+# The Bidding System
 
-### Reference Documentation
-For further reference, please consider the following sections:
+I used Spring framework 5 and springboot 2.3.3.RELEASE Latest stable release.
+The reason for choosing spring is i am more familiar and faster way of developing such rest endpoint based application.
+Springboot you dont need any external application container it support embedded containers
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/maven-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-developing-web-applications)
-* [Spring Security](https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-security)
+# Run this application on any environment with prerequisite JAVA 8 and Maven installed .
 
-### Guides
-The following guides illustrate how to use some features concretely:
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
-* [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
-* [Spring Boot and OAuth2](https://spring.io/guides/tutorials/spring-boot-oauth2/)
-* [Authenticating a User with LDAP](https://spring.io/guides/gs/authenticating-ldap/)
-* [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
+or 
+
+#From Root folder location
+mvn clean package
+java -jar -Dspring.profiles.active=dev target/auction-0.0.1-SNAPSHOT.jar
+
+#enable the com.cars24.auction.config.loader component for postman testing it will create default user with user-test password- test  and auction
 
